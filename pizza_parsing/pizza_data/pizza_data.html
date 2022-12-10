@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="avaaZNiVEXJJNla-O4aH9xzTej6CqMM3eg-DdHrF58lumIZ8msevnkJMm_JUIORXTgxzQ1jQX1Rf3OyuL7eZuA==">
+    <title>Пицца</title>
+    <link href="/assets/4c7d2733/css/bootstrap.css?v=1469461915" rel="stylesheet">
+<link href="/assets/75355cbd/slick/slick.css?v=1462538149" rel="stylesheet">
+<link href="/assets/41029b02/css/font-awesome.min.css?v=1477392983" rel="stylesheet">
+<link href="/css/preset.css?v=1510676145" rel="stylesheet">
+<link href="/css/site.css?v=1625072559" rel="stylesheet">
+<link href="/css/widget.css?v=1510676145" rel="stylesheet">
+<link href="/css/responsive.css?v=1510676145" rel="stylesheet">
+<link href="/external/bootstrap-ms-extension.css?v=1510676145" rel="stylesheet">
+<link href="/icons/style.css?v=1510676145" rel="stylesheet">    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter23190040 = new Ya.Metrika({
+                        id:23190040,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/23190040" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+
+
+<div class="wrap">
+    <div class="top-panel">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-xs-6">
+                  
+<div class="city" id="city-widget" data-city="Красноярск">
+
+            <div class="dropdown city-dropdown">
+            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="icn icn-location-mark"></i> Красноярск                <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li data-city="Сосновоборск"><a href="http://xn--90abzjebbbscbh.xn---24-6cd2bb2cns8aas.xn--p1ai">Сосновоборск</a></li>
+                            </ul>
+        </div>
+    </div>
+
+<div id="modal-city" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" aria-hidden="true"><i class="icn icn-cross"></i></a>
+
+</div>
+<div class="modal-body">
+<p class="text-center">Ваш город <b class="city-name"></b>?</p>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <button type="button" class="btn-custom btn-custom-gold form-control yes" >Да</button>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <button type="button" class="btn-custom btn-custom-blue form-control no">Нет</button>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+<script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        let modal = $('#modal-city');
+        let widget = $('#city-widget');
+        let city = $.cookie('city');
+        let href;
+
+        if (!city) {
+
+            $.get('site/city').success(function(data) {
+                let definedCity = data;
+                $('#city-widget ul li').each(function () {
+                    if ($(this).attr('data-city').toLowerCase() === definedCity.toLowerCase()) {
+                        href = $(this).find('a').attr('href');
+                        city = definedCity;
+                    }
+                });
+                if (!city) {
+                    city = $('#city-widget').attr('data-city')
+                }
+
+                $.cookie('city', city);
+
+                modal.find('.city-name').text(city);
+                modal.modal('show');
+                modal.find('.no').on('click', function () {
+                    modal.modal('hide');
+                    setTimeout(function () {
+                        widget.find('.dropdown-toggle').click();
+                    }, 500);
+                });
+                modal.find('.yes').on('click', function () {
+                    if (href) {
+                        document.location.href = href;
+                    }
+
+                    modal.modal('hide');
+                });
+            }).error(function (err) {
+                $.cookie('city', $('#city-widget').attr('data-city'));
+            })
+        }
+
+
+
+
+    }
+</script>
+
+
+                </div>
+                <div class="col-sm-8 hidden-xs hidden-ms">
+                    <div class="text-center color-grey">
+                        Мы работаем для Вас с 10.00 до 24.00 каждый день                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div class="social-buttons">
+    <p><a class="vk" href="https://vk.com/veneciasushi"><em class="fa fa-vk"> </em> </a> </p>
+</div>                </div>
+            </div><!--.row-->
+        </div>
+    </div>
+
+    <nav id="w0" class="navbar-fixed-top navbar affix-top" data-spy="affix" data-offset-top="78" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-3 col-ms-8 col-xs-8">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse-custom" data-target="#collapse-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="/images/logo.png">
+                        <img src="/images/logo-small.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-6 col-sm-7 hidden-ms hidden-xs" >
+                <ul id="w0" class="nav navbar-nav navbar-left"><li><a href="/site/about">О нас</a></li>
+<li><a href="/discounts">Акции</a></li>
+<li><a href="/site/delivery">Доставка</a></li>
+<li><a href="/site/contact">Контакты</a></li></ul>            </div>
+            <div class="col-lg-4 col-md-4 col-sm-2 col-ms-4 col-xs-4">
+                <a class="cart" href="/shop/order">
+                    <i class="icn icn-cart"></i>
+                    <span class="count cart-count">0</span>
+                    <span class="text visible-lg-inline visible-md-inline">Корзина</span>
+                </a>
+                <div class="phone-block">
+                    <a href="tel:83912287271" title="8 (391) 228-72-71" class="phone-mobile">
+                        <i class="fa fa-phone hidden-lg hidden-md"></i>
+                    </a>
+                    <span class="visible-lg-inline-block visible-md-inline-block">
+                        <span class="phone mgo-number">
+                            <p>8 (391) 228-72-71</p>
+                        </span>
+                        <a href="#" data-toggle="modal" data-target="#modal-back-call" class="call-order gold">Заказать звонок</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="nav-cap">
+
+</div>
+
+<div class="collapse-menu" id="collapse-menu">
+    <div class="inner">
+        <div class="phone-block">
+            <span class="phone">
+              <p>{setting.phone}</p>
+            </span>
+            <a href="#" data-toggle="modal" data-target="#modal-back-call" class="call-order gold">Заказать звонок</a>
+        </div>
+        <ul id="w1" class="nav navbar-nav"><li class="has-children dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Меню <i class="icn icn-arrow-left"></i></a><ul id="w2" class="dropdown-menu"><li><a href="/catalog/category/rolls_main" tabindex="-1">Роллы</a></li>
+<li><a href="/catalog/category/set" tabindex="-1">Наборы</a></li>
+<li class="active"><a href="/catalog/category/pizza" tabindex="-1">Пицца</a></li>
+<li><a href="/catalog/category/hot" tabindex="-1">Горячее</a></li>
+<li><a href="/catalog/category/salads" tabindex="-1">Салаты</a></li>
+<li><a href="/catalog/category/drinks" tabindex="-1">Напитки</a></li>
+<li><a href="/catalog/category/Cheesecakes" tabindex="-1">Десерты</a></li></ul></li>
+<li><a href="/site/about">О нас</a></li>
+<li><a href="/discounts">Акции</a></li>
+<li><a href="/site/delivery">Доставка</a></li>
+<li><a href="/site/contact">Контакты</a></li></ul>        <a class="close-button">
+            <i class="icn icn-cross"></i>
+        </a>
+    </div><!--.inner-->
+</div><!--.collapse-menu-->
+
+
+    <div class="container">
+
+        
+        <div class="margin-block">
+            
+<div class="category-slider">
+            <div class="category-item">
+
+            <a href="/catalog/category/hot">
+                                    <img src="/upload/files/H_YAmgeP1mJGbEE.png" />
+                
+                <span class="name">Горячее</span>
+            </a>
+
+
+        </div>
+            <div class="category-item">
+
+            <a href="/catalog/category/salads">
+                                    <img src="/upload/files/0hNpiGOmt5Cj3Fu.png" />
+                
+                <span class="name">Салаты</span>
+            </a>
+
+
+        </div>
+            <div class="category-item">
+
+            <a href="/catalog/category/drinks">
+                                    <img src="/upload/files/PzUn0xpqtqlzIoz.png" />
+                
+                <span class="name">Напитки</span>
+            </a>
+
+
+        </div>
+            <div class="category-item">
+
+            <a href="/catalog/category/rolls_main">
+                                    <img src="/upload/files/TSKHYq0U9cd_cHX.png" />
+                
+                <span class="name">Роллы</span>
+            </a>
+
+
+        </div>
+            <div class="category-item">
+
+            <a href="/catalog/category/set">
+                                    <img src="/upload/files/lzh8giNsKIpynBg.png" />
+                
+                <span class="name">Наборы</span>
+            </a>
+
+
+        </div>
+            <div class="category-item">
+
+            <a href="/catalog/category/pizza">
+                                    <img src="/upload/files/_Z6CYk2Le3-PY3y.png" />
+                
+                <span class="name">Пицца</span>
+            </a>
+
+
+        </div>
+            <div class="category-item">
+
+            <a href="/catalog/category/Cheesecakes">
+                                    <img src="/upload/files/zs2VrDuyR9WpRYN.png" />
+                
+                <span class="name">Десерты</span>
+            </a>
+
+
+        </div>
+    </div>
+
+        </div>
+
+                <div class="content-wrap">
+            <div class="margin-block-2x">
+                <h1>Пицца</h1>
+            </div>
+                        
+
+<div class="category-page">
+    <div class="row">
+        <div class="content col-lg-9 col-ms-12 col-xs-12">
+
+            <div id="products" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000">            
+            
+            <span class="icon-location" style="color: #fff!; "></span>
+
+            <div class="margin-block">
+                
+<div class="product-items">
+    <div class="row">
+
+        
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/194" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesE6J93JBECER2eKg_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/194" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Кальцоне куриная&quot;</a>
+                    </div>
+                    <div class="size">
+                        1195 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Закрытая пицца!<br />
+Соус фирменный, куриное филе, бекон, помидор, шампиньоны, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          995 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="194" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                              <span class="hot-label">
+                        <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                                                                <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/195" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/files-aq1LRDdtZ9gbbb_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/195" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Кальцоне с фаршем&quot;</a>
+                    </div>
+                    <div class="size">
+                        1195 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Закрытая острая пицца!<br />
+Томатный соус, фарш свиной, шампиньоны, огурец маринованый, зелень, перец халапеньо, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          995 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="195" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                              <span class="hot-label">
+                        <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                                                                <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/196" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesvP81C63Gbj8cOAY_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/196" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Кальцоне со свининой&quot;</a>
+                    </div>
+                    <div class="size">
+                        1190 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Закрытая острая пицца!<br />
+Томатный соус, свинина, перец халапеньо, красный лук, помидоры, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          995 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="196" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/197" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesN2WzD7Zt6yXNuzZ_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/197" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Кальцоне с ветчиной&quot;</a>
+                    </div>
+                    <div class="size">
+                        1280 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Закрытая пицца!<br />
+Чесночный соус, сервелат, ветчина, сырокопченая колбаса, помидоры, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          995 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="197" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/198" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesZPQSA-q3x4r1KYu_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/198" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Кальцоне с семгой&quot;</a>
+                    </div>
+                    <div class="size">
+                        1055 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Закрытая пицца!<br />
+Чесночный соус, семга, зелень, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          1095 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="198" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/277" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/fileslb9Z6s3zRfg-Cot_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/277" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Нептун&quot;</a>
+                    </div>
+                    <div class="size">
+                        895 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, тигровые креветки, слабосоленая семга, краб, шампиньоны, помидоры черри, сыр гауда, оливки, лимон.                    </div>
+
+                                          <div class="price">
+                          895 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="277" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/269" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesZ3Q5WfrxIBE-4jf_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/269" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Супер мясная&quot;</a>
+                    </div>
+                    <div class="size">
+                        910 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, бекон, копченое мясо, ветчина, сервелат, охотничьи колбаски, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="269" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/263" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/files2ojR_nml1j0r7AQ_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/263" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Гавайская с курицей&quot;</a>
+                    </div>
+                    <div class="size">
+                        825 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, куриное филе, ананас, сыр гауда, оливки.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="263" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/264" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesEVtRN_oRv8kmgTR_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/264" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Столичная&quot;</a>
+                    </div>
+                    <div class="size">
+                        910 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, бекон, копченое мясо, шампиньоны, репчатый лук, помидоры черри, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="264" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/265" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesZ2DfOge29o5wpab_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/265" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Неаполитана&quot;</a>
+                    </div>
+                    <div class="size">
+                        900 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, бекон, колбаски охотничьи, помидоры, перец болгарский, маринованные огурцы, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="265" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/266" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filespylRKJg1Iwq3Q6Z_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/266" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;С бужениной&quot;</a>
+                    </div>
+                    <div class="size">
+                        895 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, буженина, шампиньоны, помидоры, сыр гауда, оливки, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="266" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/267" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesszjIdHOVDXkqHIx_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/267" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Сибирская&quot;</a>
+                    </div>
+                    <div class="size">
+                        930 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, ветчина, сервелат, помидоры, шампиньоны, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="267" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/268" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/files4KgtxOnGOCK7fVz_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/268" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Фирменная&quot;</a>
+                    </div>
+                    <div class="size">
+                        860 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Чесночный соус, буженина, филе копченой курицы, колбаски охотничьи, шампиньоны, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="268" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                              <span class="hot-label">
+                        <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                                                                <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/270" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesyMi4cK3XK4-MHIq_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/270" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Пикантная&quot;</a>
+                    </div>
+                    <div class="size">
+                        870 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская острая пицца!<br />
+Томатный соус, ветчина, буженина, маринованные огурцы, помидоры черри, сыр гауда, перец халапеньо.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="270" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                              <span class="hot-label">
+                        <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                                                                <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/271" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filescPwkBY2HHh4SLAV_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/271" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Мексиканская&quot;</a>
+                    </div>
+                    <div class="size">
+                        920 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская острая пицца!<br />
+Чесночный соус, буженина, бекон, шампиньоны, помидоры, сыр гауда, перец халапеньо, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="271" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                              <span class="hot-label">
+                        <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                                                                <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/272" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesDFBYU8AsqHb5ujO_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/272" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Гурмэ&quot;</a>
+                    </div>
+                    <div class="size">
+                        925 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская острая пицца!<br />
+Томатный соус, свинина, филе куриное, красный лук, помидоры, сыр гауда, оливки, перец халапеньо.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="272" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                          <span class="vegetarian-label">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                      </span>
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/274" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesK_hl-iXwne10J9W_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/274" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;4 сыра&quot;</a>
+                    </div>
+                    <div class="size">
+                        770 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца! <br />
+Чесночный соус, томатный соус, сыр чеддер, сыр моцарелла, сыр пармезан, сыр дор блю.                    </div>
+
+                                          <div class="price">
+                          895 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="274" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/199" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesTt6-0Ffdq7u0aGd_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/199" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Охотничья&quot;</a>
+                    </div>
+                    <div class="size">
+                        865 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Соус барбекю, колбаски охотничьи, помидор черри, лук репчатый, сыр гауда, оливки.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="199" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/200" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesYjeHhCnGce336hz_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/200" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Карбонара&quot;</a>
+                    </div>
+                    <div class="size">
+                        870 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, бекон, шампиньоны, яйцо, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="200" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/201" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesnTzp9i9VhhwfLYf_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/201" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Болоньезе&quot;</a>
+                    </div>
+                    <div class="size">
+                        875 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, фарш свиной, болгарский перец, лук репчатый, сыр гауда, каперсы, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="201" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                          <span class="vegetarian-label">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                      </span>
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/202" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesBeNGKB9S3aGx5Mt_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/202" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Овощная&quot;</a>
+                    </div>
+                    <div class="size">
+                        895 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, шампиньоны, болгарский перец, огурец маринованный, помидор, сыр гауда, оливки, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="202" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/203" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/files4kUUEBHblvwwEt3_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/203" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;С копченой курицей&quot;</a>
+                    </div>
+                    <div class="size">
+                        850 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Соус барбекю, копченая курица, копченое мясо, огурец маринованный, помидор черри, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="203" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/204" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesI9kL-CSKfCwhPXR_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/204" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Со свининой&quot;</a>
+                    </div>
+                    <div class="size">
+                        865 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, свинина, шампиньоны, помидор черри, сыр гауда, оливки.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="204" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/206" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/files38ExCLz2wTf-uAE_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/206" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Нежная&quot;</a>
+                    </div>
+                    <div class="size">
+                        920 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, ветчина, омлет из яйца, помидор, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="206" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/207" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesx4TelQnocAbCC_9_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/207" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Цезарь&quot;</a>
+                    </div>
+                    <div class="size">
+                        790 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Соус цезарь, куриное филе, лист салата, помидор черри, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="207" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/208" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesXy8MOjIT6rrHxTU_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/208" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Аргентинская&quot;</a>
+                    </div>
+                    <div class="size">
+                        810 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, копченое мясо, колбаски охотничьи, шампиньоны, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="208" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/209" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesd1gDxrXpAlU2Gze_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/209" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Классическая&quot;</a>
+                    </div>
+                    <div class="size">
+                        925 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, фарш свиной, шампиньоны, помидоры, сыр гауда, оливки, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="209" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/210" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesqoOBiLi16P5-I32_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/210" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Пепперони&quot;</a>
+                    </div>
+                    <div class="size">
+                        875 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, пепперони, сервелат, болгарский перец, помидоры, сыр гауда, оливки, каперсы, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="210" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/211" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesSfw2I2j4Rl6g9vG_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/211" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;4 сезона&quot;</a>
+                    </div>
+                    <div class="size">
+                        790 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, ветчина, колбаски охотничьи, маринованные огурцы, сыр гауда, оливки, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="211" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/212" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesdb8pRd5YNspF-e9_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/212" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Гавайская с ветчиной&quot;</a>
+                    </div>
+                    <div class="size">
+                        810 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, ветчина, ананас, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="212" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/213" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesj5Px9Ro0G9U85vy_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/213" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Мясная&quot;</a>
+                    </div>
+                    <div class="size">
+                        830 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, копченое мясо, колбаски охотничьи, бекон, сыр гауда, оливки, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="213" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/214" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesWy42xRFNVLtKd_8_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/214" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Американская&quot;</a>
+                    </div>
+                    <div class="size">
+                        870 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Томатный соус, ветчина, помидоры, болгарский перец, сыр гауда, оливки, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="214" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                              <span class="hot-label">
+                        <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                                                                <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/215" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/fileszpYQZ1BqLk5GmcI_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/215" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Дьябло&quot;</a>
+                    </div>
+                    <div class="size">
+                        880 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская острая пицца!<br />
+Чесночный соус, томатный соус, сервелат, ветчина, колбаски охотничьи, шампиньоны, перец болгарский, сыр гауда, перец халапеньо.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="215" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                          <span class="vegetarian-label">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                      </span>
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/216" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filespfie2Q5Gchw1dpb_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/216" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Маргарита&quot;</a>
+                    </div>
+                    <div class="size">
+                        725 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, помидоры, сыр гауда, орегано, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="216" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/217" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/files138VtFoKj1E43pG_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/217" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Суприм&quot;</a>
+                    </div>
+                    <div class="size">
+                        870 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, сервелат, куриное филе, шампиньоны, помидоры, сыр гауда.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="217" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/218" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesarKqUze2IcJl3j-_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/218" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Английская&quot;</a>
+                    </div>
+                    <div class="size">
+                        830 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, бекон, куриное филе, помидоры, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="218" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                          <span class="vegetarian-label">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                      </span>
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/273" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesZPvr-To00RQS4LV_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/273" data-toggle="modal" data-target="#modal-product" class="gold">Сырная лепёшка</a>
+                    </div>
+                    <div class="size">
+                        680 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Фирменный соус, сыр гауда, зелень.                    </div>
+
+                                          <div class="price">
+                          495 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="273" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                          <span class="vegetarian-label">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                      </span>
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/275" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesVAykPonZII285xN_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/275" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Экзотика&quot;</a>
+                    </div>
+                    <div class="size">
+                        810 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Йогурт клубничный, яблоко, ананас, мандарин, сыр моцарелла, корица.<br />
+                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="275" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-ms-12 col-xs-12">
+                <div class="product-item">
+                                          <span class="vegetarian-label">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                      </span>
+                                                                                    <div class="corner-label corner-label-left">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! 1 + 1 = 4 *                            </div>
+                        </div>
+                                                                <div class="corner-label corner-label-right">
+                            <svg width="160" height="30" >
+                                <path fill="#1383b2" d="M 30,0 L 130,0 L 160,30 L 0,30 z"></path>
+                            </svg>
+                            <div class="corner-label-text">
+                                Акция! Подарок<br/>при заказе от 1000*                            </div>
+                        </div>
+                    
+                    <div class="img">
+                        <a href="/catalog/product/276" data-toggle="modal" data-target="#modal-product">
+                            <img src="/upload/resize_images/upload/filesOLRNLWD3TIQ3um0_product-small_91110b804f88f68b4f5892f310f664c2.png" />
+                        </a>
+                    </div>
+                    <div class="name">
+                        <a href="/catalog/product/276" data-toggle="modal" data-target="#modal-product" class="gold">Пицца &quot;Тропикана&quot;</a>
+                    </div>
+                    <div class="size">
+                        810 г. &nbsp;
+                    </div>
+                    <div class="text">
+                        Американская пицца!<br />
+Йогурт клубничный, апельсин, банан, киви, сыр моцарелла, корица.                    </div>
+
+                                          <div class="price">
+                          795 <i class="fa fa-rub" aria-hidden="true"></i>
+                      </div>
+                    
+                                          <a class="btn-custom btn-custom-gold button-buy" href="#" data-product-id="276" role="add-to-cart" data-count="1">Заказать</a>
+                    
+                </div><!--.product-item-->
+            </div>
+            </div><!--.row-->
+</div><!--.product-items-->
+
+
+
+<div id="modal-product" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" aria-hidden="true"><i class="icn icn-cross"></i></a>
+
+</div>
+<div class="modal-body">
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+            </div><!--.margin-block-->
+            </div>
+            
+                            <div class="margin-block-2x">
+                    
+<div class="default-content">
+    <p lang="ru-ru" xml:lang="ru-ru">Пицца стала традиционным блюдом Италии, однако своим появлением она обязана египтянам и грекам.<strong> </strong>Рецепты пиццы совершенствовались веками. Блюда обретали всё новые вкусы. Сейчас существует больше двухсот вариаций этого кулинарного творения.</p>
+
+<p lang="ru-ru" xml:lang="ru-ru">Если вас заинтересовала доставка пиццы меню на нашем сайте поможет сориентироваться в ассортименте продукции. Нами реализуется тонкая пицца на любой вкус и бюджет. Вами может быть выбрана итальянская пицца следующих видов:</p>
+
+<ul><li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Маргарита»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Классическая»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Четыре сезона»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Дьябло»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">сырная пицца с помидорами/сосисками/грибами;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Суприм»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Морская»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">«Кальцоне»;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">с курицей и брокколи;</p>
+	</li>
+	<li>
+	<p lang="ru-ru" xml:lang="ru-ru">с фаршем/ветчиной и др.</p>
+	</li>
+</ul><p lang="ru-ru" xml:lang="ru-ru">Если вам нужна «Американская», «Пепперони», «Гавайская», «Австралийская» или иная пицца телефоны на нашем сайте – самый быстрый способ сделать заказ. Если вам нравится какая-то особая пицца меню содержит иллюстрации и описание входящих ингредиентов, что позволит безошибочно подобрать вариант, который вам придётся по вкусу. В наше меню периодически добавляется новая пицца сайт нашего онлайн-ресторана содержит всю необходимую информацию об этих новинках.</p>
+
+<p lang="ru-ru" xml:lang="ru-ru">Иногда клиенты не могут определиться с выбором. В таком случае наши операторы проконсультируют по любому вопросу, дадут советы и расскажут об особенностях того или иного блюда. Если вас заинтересовала пицца цена её складывается исходя из размеров и вида, количества начинки. Служба доставки «Венеция» расскажет о самых известных вариантах этого шикарного кушанья.</p>
+</div>                </div><!--.margin-block-->
+            
+        </div><!--.content-->
+        <div class="sidebar col-lg-3 visible-lg">
+            <div id="cart-widget-container" data-spy="affix" data-offset-top="462" id="cart-widget" data-offset-bottom="155">
+                
+<div class="cart-widget margin-block">
+    <div class="h3 header">
+        ВАШ ЗАКАЗ:
+    </div>
+
+    <div class="cart-items">
+                
+    </div><!--.cart-items-->
+
+    <div class="total-price">
+        0 <i class="fa fa-rub"></i>
+    </div>
+
+
+    <div class="order">
+                    <a class="btn-custom btn-custom-gold btn-block disabled" href="/catalog/#">Оформить заказ</a>            <div class="text">
+                <i class="icn icn-gift"></i><br>
+                При покупке на 1000 рублей вы получите подарок
+            </div>
+            </div>
+</div>
+
+            </div>
+                    </div>
+    </div><!--.row-->
+</div>
+
+
+
+
+<div id="modal-product" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" aria-hidden="true"><i class="icn icn-cross"></i></a>
+
+</div>
+<div class="modal-body">
+
+</div>
+
+</div>
+</div>
+</div>
+
+        </div><!--.content-wrap-->
+            </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-ms-12 col-xs-12">
+                <p>
+                    ИП Гречаная Василиса Владимировна			<br />
+320246800018072			<br />
+<br />
+© Венеция 2022, Красноярск                </p>
+            </div>
+            <div class="col-lg-6 col-md-5 col-sm-5 col-ms-12 col-xs-12">
+                <ul id="w3" class="footer-menu nav"><li><a href="/site/about">О нас</a></li>
+<li><a href="/discounts">Акции</a></li>
+<li><a href="/site/delivery">Доставка</a></li>
+<li><a href="/site/contact">Контакты</a></li></ul>                <span class="public-offer">
+                    *Информация на сайте носит справочный характер и не является публичной офертой. Скидки и акции не суммируются, не распространяются на напитки, специи и десерты. Внешний вид, цена и состав блюд могут отличаться от представленных на сайте. Все подробности можно уточнить у операторов по телефону 8 (391) 228-72-71.                </span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2 col-ms-12 col-xs-12" >
+                <a href="http://rubit.tech"><img src="/images/rubit.png" style="width: 105px;"></a>
+                <div class="social-buttons">
+    <p><a class="vk" href="https://vk.com/veneciasushi"><em class="fa fa-vk"> </em> </a> </p>
+</div>            </div>
+        </div>
+    </div>
+    <div class="get-gift-cap"></div>
+    <div id="gift-widget-container">
+        <div class="get-gift">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 hidden-sm hidden-xs hidden-ms">
+                <div class="name">
+                    <i class="icn icn-question-mark"></i> Получи подарки
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <div class="line">
+                                        <div class="fill hidden-xs hidden-ms" style="width: 0px">
+                        <div class="marker" style="display: none">
+                            <div>
+                                <i class="icn icn-like"></i><br>
+                                ОСТАЛОСЬ СОВСЕМ НЕМНОГО
+                            </div>
+                            <a class="close-button" data-dismiss="marker">
+                                <i class="icn icn-cross"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="fill hidden-lg hidden-md hidden-sm" style="width: 0px">
+                        <div class="marker" style="display: none">
+                            <div>
+                                <i class="icn icn-like"></i><br>
+                                ОСТАЛОСЬ СОВСЕМ НЕМНОГО
+                            </div>
+                            <a class="close-button" data-dismiss="marker">
+                                <i class="icn icn-cross"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="items">
+                                              <div class="item">
+                          <span><i class="icn icn-gift"></i> 1000 <i class="fa fa-rub"></i></span>
+                        </div>
+                                              <div class="item">
+                          <span><i class="icn icn-gift"></i> 2000 <i class="fa fa-rub"></i></span>
+                        </div>
+                                              <div class="item">
+                          <span><i class="icn icn-gift"></i> 3000 <i class="fa fa-rub"></i></span>
+                        </div>
+                                              <div class="item">
+                          <span><i class="icn icn-gift"></i> 4000 <i class="fa fa-rub"></i></span>
+                        </div>
+                                              <div class="item">
+                          <span><i class="icn icn-gift"></i> 5000 <i class="fa fa-rub"></i></span>
+                        </div>
+                                          </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--.get-gift-->
+    </div>
+</footer>
+
+
+
+<div id="modal-back-call" class="fade modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" aria-hidden="true"><i class="icn icn-cross"></i></a>
+
+</div>
+<div class="modal-body">
+
+<div id="p0" data-pjax-container="" data-pjax-timeout="1000">
+<form id="call-back-form" action="/site/back-call" method="post" role="form">
+<input type="hidden" name="_csrf" value="avaaZNiVEXJJNla-O4aH9xzTej6CqMM3eg-DdHrF58lumIZ8msevnkJMm_JUIORXTgxzQ1jQX1Rf3OyuL7eZuA==">
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <h2 class="text-center">Обратный звонок</h2>
+        <div class="margin-block">
+                            <div class="form-group field-backcall-name required">
+<label class="control-label" for="backcall-name">Ваше имя</label>
+<input type="text" id="backcall-name" class="form-control-custom" name="BackCall[name]" autofocus aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>
+                <div class="form-group field-backcall-phone required">
+<label class="control-label" for="backcall-phone">Телефон</label>
+<input type="text" id="backcall-phone" class="form-control-custom phone-mask" name="BackCall[phone]" placeholder="+7 () - - -" aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>
+                <div class="form-group field-backcall-email">
+<label class="control-label" for="backcall-email">E-mail</label>
+<input type="text" id="backcall-email" class="form-control-custom" name="BackCall[email]">
+
+<p class="help-block help-block-error"></p>
+</div>
+                <div class="form-group field-ym-uid">
+
+<input type="hidden" id="ym-uid" class="form-control-custom" name="BackCall[ym_uid]">
+
+<p class="help-block help-block-error"></p>
+</div>
+                <div class="form-group field-ga-uid">
+
+<input type="hidden" id="ga-uid" class="form-control-custom" name="BackCall[ga_uid]">
+
+<p class="help-block help-block-error"></p>
+</div>
+                <div class="form-group">
+                    <button type="submit" class="btn-custom btn-custom-gold form-control" name="login-button">Заказать звонок</button>                </div>
+
+                    </div>
+    </div>
+</div>
+
+</form>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114528639-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114528639-1');
+</script>
+
+<script>
+    (function(w, d, u, i, o, s, p) {
+        if (d.getElementById(i)) { return; } w['MangoObject'] = o;
+        w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) }; w[o].u = u; w[o].t = 1 * new Date();
+        s = d.createElement('script'); s.async = 1; s.id = i; s.src = u;
+        p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
+    }(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo'));
+    mgo({calltracking: {id: 16496, elements: [{"selector":".mgo-number"}]}});
+</script><script src="/assets/60155730/jquery.js?v=1463765083"></script>
+<script src="/assets/4c7d2733/js/bootstrap.js?v=1469461915"></script>
+<script src="/assets/ea5fde71/yii.js?v=1496673221"></script>
+<script src="/assets/7e66dd56/jquery.pjax.js?v=1457097887"></script>
+<script src="/assets/9bd5e3e5/cart-widget.js?v=1510676145"></script>
+<script src="/assets/75355cbd/slick/slick.min.js?v=1462538149"></script>
+<script src="/assets/43784e57/js/count-widget.js?v=1510676145"></script>
+<script src="/external/inputmask/inputmask.js?v=1510676145"></script>
+<script src="/external/inputmask/jquery.inputmask.js?v=1510676145"></script>
+<script src="/js/svsoft.shop.js?v=1510676145"></script>
+<script src="/js/shop.js?v=1510676145"></script>
+<script src="/js/constructor.js?v=1510676145"></script>
+<script src="/external/jquery.cookie.js?v=1510676145"></script>
+<script src="/assets/ea5fde71/yii.activeForm.js?v=1496673221"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+
+    $('.product-items').on('click', '[role="add-to-cart"]', function (e) {
+        
+        yii.shop.clickAddToCart($(this), function() {
+            // обновляем виджет корзины
+            yii.cartWidget.refresh();
+        });
+        
+        return false;
+       
+    });
+    
+    // Биндим обработчики на клик кнопки добавление в корзину в модальном окне
+    $('#modal-product').on('click', '[role="add-to-cart"]', function (e) {
+        
+        yii.shop.clickAddToCart($(this), function() {
+            // обновляем виджет корзины
+            yii.cartWidget.refresh();
+        });
+        
+        return false;
+    });
+jQuery('#modal-product').modal({"show":false,"backdrop":"static","keyboard":true});
+    $('#modal-product').on('show.bs.modal', function (e) {
+            var link = $(e.relatedTarget);
+            $(this).find('.modal-body').load(link.attr("href"));
+    });
+jQuery(document).pjax(".reset a", {"push":true,"replace":false,"timeout":1000,"scrollTo":false,"container":"#products"});
+jQuery(document).on("submit", "#filter-form", function (event) {jQuery.pjax.submit(event, {"push":true,"replace":false,"timeout":1000,"scrollTo":false,"container":"#products"});});
+    
+    //yii.cartWidget.init();
+
+
+    // Биндим обработчики на клик кнопки добавление в корзину в модальном окне
+    $('#modal-product').on('click', '[role="add-to-cart"]', function (e) {
+        
+        yii.shop.clickAddToCart($(this), function() {
+            // обновляем виджет корзины
+            yii.cartWidget.refresh();
+        });
+        
+        return false;
+    });
+jQuery('#modal-city').modal({"show":false,"backdrop":"static","keyboard":true});
+
+$('[data-toggle="tooltip"]').tooltip({
+   container: 'body'
+});
+
+$('.navbar-toggle').click(function() {   
+    collapseToggle();
+});
+
+$('.collapse-menu .close-button').click(function() {   
+    collapseToggle();
+});
+
+
+function collapseToggle () 
+{
+    var jObj = $('#collapse-menu');
+    
+    if (jObj.hasClass('in'))
+    {
+        jObj.removeClass('in');
+        jObj.addClass('out');
+    }
+    else
+    {
+        jObj.addClass('in');
+        jObj.removeClass('out');
+    }
+}
+
+$('.mgo-number').on('DOMSubtreeModified', function(){
+    
+    var text = $(this).text();
+    
+    if (text.length)
+        $(this).off('DOMSubtreeModified');
+    else 
+        return;
+    
+    var phone = text.replace('(','').replace(')','').replace(' ','').replace(' ','').replace(' ','').replace('-','').replace('-','').replace('-','').replace('-','');
+    
+    $('.phone-mobile').attr({
+        'href':'tel:+'+phone,
+        'title':text,
+    });
+    
+});
+
+
+// With JQuery
+$('.category-slider').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 3,
+    dots: false,
+    lazyLoad: 'ondemand',
+    prevArrow: '<a class="arrow arrow-left"><i class="icn icn-arrow-left"></i></a>',
+    nextArrow: '<a class="arrow arrow-right"><i class="icn icn-arrow-right"></i></a>',
+    
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+
+$('#gift-widget-container').on('click', '.get-gift .marker .close-button', function() {
+  $('.get-gift .marker').hide();
+});
+
+jQuery('#call-back-form').yiiActiveForm([], []);
+    $('#backcall-phone').inputmask({"mask": "+7 (999) 999 99 99"});
+
+    // Устанавливаем uid для счетчиков Гугл аналитики и яндекс метрики
+    $('#ga-uid').attr('value', $.cookie('_gid'));
+    $('#ym-uid').attr('value', $.cookie('_ym_uid'));
+jQuery(document).pjax("#p0 a", {"push":false,"replace":false,"timeout":1000,"scrollTo":false,"container":"#p0"});
+jQuery(document).on("submit", "#call-back-form", function (event) {jQuery.pjax.submit(event, {"push":false,"replace":false,"timeout":1000,"scrollTo":false,"container":"#p0"});});
+jQuery('#modal-back-call').modal({"show":false,"backdrop":"static","keyboard":true});
+});</script>
+
+
+</body>
+</html>

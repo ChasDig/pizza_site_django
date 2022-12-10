@@ -1,0 +1,275 @@
+[
+    {
+        "name": "Пицца \"Кальцоне куриная\"",
+        "size": "1195 г.",
+        "text": "Закрытая пицца!\nСоус фирменный, куриное филе, бекон, помидор, шампиньоны, сыр гауда, зелень.",
+        "price": "995",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesE6J93JBECER2eKg_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Кальцоне с фаршем\"",
+        "size": "1195 г.",
+        "text": "Закрытая острая пицца!\nТоматный соус, фарш свиной, шампиньоны, огурец маринованый, зелень, перец халапеньо, сыр гауда.",
+        "price": "995",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/files-aq1LRDdtZ9gbbb_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Кальцоне со свининой\"",
+        "size": "1190 г.",
+        "text": "Закрытая острая пицца!\nТоматный соус, свинина, перец халапеньо, красный лук, помидоры, сыр гауда.",
+        "price": "995",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesvP81C63Gbj8cOAY_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Кальцоне с ветчиной\"",
+        "size": "1280 г.",
+        "text": "Закрытая пицца!\nЧесночный соус, сервелат, ветчина, сырокопченая колбаса, помидоры, сыр гауда.",
+        "price": "995",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesN2WzD7Zt6yXNuzZ_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Кальцоне с семгой\"",
+        "size": "1055 г.",
+        "text": "Закрытая пицца!\nЧесночный соус, семга, зелень, сыр гауда.",
+        "price": "1095",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesZPQSA-q3x4r1KYu_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Нептун\"",
+        "size": "895 г.",
+        "text": "Американская пицца!\nФирменный соус, тигровые креветки, слабосоленая семга, краб, шампиньоны, помидоры черри, сыр гауда, оливки, лимон.",
+        "price": "895",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/fileslb9Z6s3zRfg-Cot_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Супер мясная\"",
+        "size": "910 г.",
+        "text": "Американская пицца!\nТоматный соус, бекон, копченое мясо, ветчина, сервелат, охотничьи колбаски, сыр гауда, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesZ3Q5WfrxIBE-4jf_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Гавайская с курицей\"",
+        "size": "825 г.",
+        "text": "Американская пицца!\nТоматный соус, куриное филе, ананас, сыр гауда, оливки.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/files2ojR_nml1j0r7AQ_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Столичная\"",
+        "size": "910 г.",
+        "text": "Американская пицца!\nФирменный соус, бекон, копченое мясо, шампиньоны, репчатый лук, помидоры черри, сыр гауда, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesEVtRN_oRv8kmgTR_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Неаполитана\"",
+        "size": "900 г.",
+        "text": "Американская пицца!\nФирменный соус, бекон, колбаски охотничьи, помидоры, перец болгарский, маринованные огурцы, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesZ2DfOge29o5wpab_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"С бужениной\"",
+        "size": "895 г.",
+        "text": "Американская пицца!\nФирменный соус, буженина, шампиньоны, помидоры, сыр гауда, оливки, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filespylRKJg1Iwq3Q6Z_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Сибирская\"",
+        "size": "930 г.",
+        "text": "Американская пицца!\nФирменный соус, ветчина, сервелат, помидоры, шампиньоны, сыр гауда, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesszjIdHOVDXkqHIx_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Фирменная\"",
+        "size": "860 г.",
+        "text": "Американская пицца!\nЧесночный соус, буженина, филе копченой курицы, колбаски охотничьи, шампиньоны, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/files4KgtxOnGOCK7fVz_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Пикантная\"",
+        "size": "870 г.",
+        "text": "Американская острая пицца!\nТоматный соус, ветчина, буженина, маринованные огурцы, помидоры черри, сыр гауда, перец халапеньо.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesyMi4cK3XK4-MHIq_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Мексиканская\"",
+        "size": "920 г.",
+        "text": "Американская острая пицца!\nЧесночный соус, буженина, бекон, шампиньоны, помидоры, сыр гауда, перец халапеньо, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filescPwkBY2HHh4SLAV_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Гурмэ\"",
+        "size": "925 г.",
+        "text": "Американская острая пицца!\nТоматный соус, свинина, филе куриное, красный лук, помидоры, сыр гауда, оливки, перец халапеньо.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesDFBYU8AsqHb5ujO_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"4 сыра\"",
+        "size": "770 г.",
+        "text": "Американская пицца! \nЧесночный соус, томатный соус, сыр чеддер, сыр моцарелла, сыр пармезан, сыр дор блю.",
+        "price": "895",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesK_hl-iXwne10J9W_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Охотничья\"",
+        "size": "865 г.",
+        "text": "Американская пицца!\nСоус барбекю, колбаски охотничьи, помидор черри, лук репчатый, сыр гауда, оливки.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesTt6-0Ffdq7u0aGd_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Карбонара\"",
+        "size": "870 г.",
+        "text": "Американская пицца!\nФирменный соус, бекон, шампиньоны, яйцо, сыр гауда, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesYjeHhCnGce336hz_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Болоньезе\"",
+        "size": "875 г.",
+        "text": "Американская пицца!\nТоматный соус, фарш свиной, болгарский перец, лук репчатый, сыр гауда, каперсы, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesnTzp9i9VhhwfLYf_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Овощная\"",
+        "size": "895 г.",
+        "text": "Американская пицца!\nТоматный соус, шампиньоны, болгарский перец, огурец маринованный, помидор, сыр гауда, оливки, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesBeNGKB9S3aGx5Mt_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"С копченой курицей\"",
+        "size": "850 г.",
+        "text": "Американская пицца!\nСоус барбекю, копченая курица, копченое мясо, огурец маринованный, помидор черри, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/files4kUUEBHblvwwEt3_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Со свининой\"",
+        "size": "865 г.",
+        "text": "Американская пицца!\nФирменный соус, свинина, шампиньоны, помидор черри, сыр гауда, оливки.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesI9kL-CSKfCwhPXR_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Нежная\"",
+        "size": "920 г.",
+        "text": "Американская пицца!\nФирменный соус, ветчина, омлет из яйца, помидор, сыр гауда, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/files38ExCLz2wTf-uAE_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Цезарь\"",
+        "size": "790 г.",
+        "text": "Американская пицца!\nСоус цезарь, куриное филе, лист салата, помидор черри, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesx4TelQnocAbCC_9_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Аргентинская\"",
+        "size": "810 г.",
+        "text": "Американская пицца!\nТоматный соус, копченое мясо, колбаски охотничьи, шампиньоны, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesXy8MOjIT6rrHxTU_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Классическая\"",
+        "size": "925 г.",
+        "text": "Американская пицца!\nТоматный соус, фарш свиной, шампиньоны, помидоры, сыр гауда, оливки, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesd1gDxrXpAlU2Gze_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Пепперони\"",
+        "size": "875 г.",
+        "text": "Американская пицца!\nТоматный соус, пепперони, сервелат, болгарский перец, помидоры, сыр гауда, оливки, каперсы, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesqoOBiLi16P5-I32_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"4 сезона\"",
+        "size": "790 г.",
+        "text": "Американская пицца!\nФирменный соус, ветчина, колбаски охотничьи, маринованные огурцы, сыр гауда, оливки, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesSfw2I2j4Rl6g9vG_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Гавайская с ветчиной\"",
+        "size": "810 г.",
+        "text": "Американская пицца!\nФирменный соус, ветчина, ананас, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesdb8pRd5YNspF-e9_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Мясная\"",
+        "size": "830 г.",
+        "text": "Американская пицца!\nФирменный соус, копченое мясо, колбаски охотничьи, бекон, сыр гауда, оливки, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesj5Px9Ro0G9U85vy_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Американская\"",
+        "size": "870 г.",
+        "text": "Американская пицца!\nТоматный соус, ветчина, помидоры, болгарский перец, сыр гауда, оливки, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesWy42xRFNVLtKd_8_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Дьябло\"",
+        "size": "880 г.",
+        "text": "Американская острая пицца!\nЧесночный соус, томатный соус, сервелат, ветчина, колбаски охотничьи, шампиньоны, перец болгарский, сыр гауда, перец халапеньо.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/fileszpYQZ1BqLk5GmcI_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Маргарита\"",
+        "size": "725 г.",
+        "text": "Американская пицца!\nФирменный соус, помидоры, сыр гауда, орегано, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filespfie2Q5Gchw1dpb_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Суприм\"",
+        "size": "870 г.",
+        "text": "Американская пицца!\nФирменный соус, сервелат, куриное филе, шампиньоны, помидоры, сыр гауда.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/files138VtFoKj1E43pG_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Английская\"",
+        "size": "830 г.",
+        "text": "Американская пицца!\nФирменный соус, бекон, куриное филе, помидоры, сыр гауда, зелень.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesarKqUze2IcJl3j-_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Сырная лепёшка",
+        "size": "680 г.",
+        "text": "Американская пицца!\nФирменный соус, сыр гауда, зелень.",
+        "price": "495",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesZPvr-To00RQS4LV_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Экзотика\"",
+        "size": "810 г.",
+        "text": "Американская пицца!\nЙогурт клубничный, яблоко, ананас, мандарин, сыр моцарелла, корица.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesVAykPonZII285xN_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    },
+    {
+        "name": "Пицца \"Тропикана\"",
+        "size": "810 г.",
+        "text": "Американская пицца!\nЙогурт клубничный, апельсин, банан, киви, сыр моцарелла, корица.",
+        "price": "795",
+        "image": "http://суши-пицца24.рф/upload/resize_images/upload/filesOLRNLWD3TIQ3um0_product-small_91110b804f88f68b4f5892f310f664c2.png"
+    }
+]
